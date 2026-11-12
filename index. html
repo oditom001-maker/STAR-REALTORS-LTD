@@ -1,0 +1,688 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STAR REALTORS LTD · Premium Nairobi Living</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --navy: #0A2342; /* Brand Navy */
+            --gold: #C99B3B; /* Brand Gold */
+            --gold-light: #F4E8D1;
+            --bg-light: #F8F9FA;
+            --text-dark: #2C3E50;
+            --text-muted: #6B7A8B;
+            --white: #FFFFFF;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Open Sans', sans-serif;
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4, .brand-text {
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            width: 100%;
+        }
+
+        /* ===== TOP BAR ===== */
+        .top-bar {
+            background-color: var(--navy);
+            color: var(--white);
+            font-size: 0.85rem;
+            padding: 0.5rem 0;
+            text-align: center;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+        }
+
+        .top-bar span {
+            margin: 0 1rem;
+        }
+
+        .top-bar i {
+            color: var(--gold);
+            margin-right: 5px;
+        }
+
+        /* ===== HEADER / NAV ===== */
+        .navbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 1rem 0;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            background-color: var(--white);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        /* Custom Logo Recreation based on image */
+        .logo-mark {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            border: 2px dashed var(--navy);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            background: white;
+        }
+
+        .logo-mark::before {
+            content: '★';
+            position: absolute;
+            top: 5px;
+            font-size: 24px;
+            color: var(--gold);
+            text-shadow: 0 0 2px rgba(0,0,0,0.2);
+        }
+
+        .logo-house {
+            position: absolute;
+            bottom: 8px;
+            width: 20px;
+            height: 15px;
+            background-color: var(--navy);
+            clip-path: polygon(50% 0%, 100% 40%, 100% 100%, 0 100%, 0 40%);
+        }
+        
+        .logo-house::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 5px;
+            width: 10px;
+            height: 8px;
+            background-color: var(--gold);
+        }
+
+        .brand-text {
+            display: flex;
+            flex-direction: column;
+            line-height: 1.1;
+        }
+
+        .brand-text .title {
+            font-weight: 800;
+            font-size: 1.5rem;
+            color: var(--navy);
+            letter-spacing: -0.5px;
+        }
+
+        .brand-text .subtitle {
+            font-size: 0.65rem;
+            color: var(--gold);
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .nav-contact {
+            display: flex;
+            gap: 1.5rem;
+            align-items: center;
+        }
+
+        .nav-contact .phone-link {
+            text-decoration: none;
+            color: var(--navy);
+            font-weight: 700;
+            font-size: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: color 0.2s;
+        }
+
+        .nav-contact .phone-link:hover {
+            color: var(--gold);
+        }
+
+        .nav-contact .phone-link i {
+            background: var(--gold-light);
+            color: var(--gold);
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0.8rem 1.8rem;
+            border-radius: 5px;
+            font-weight: 700;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.9rem;
+            cursor: pointer;
+            border: none;
+        }
+
+        .btn-gold {
+            background: var(--gold);
+            color: var(--navy);
+            box-shadow: 0 4px 15px rgba(201, 155, 59, 0.3);
+        }
+
+        .btn-gold:hover {
+            background: #b88a31;
+            transform: translateY(-2px);
+        }
+
+        .btn-navy {
+            background: var(--navy);
+            color: var(--white);
+        }
+        
+        .btn-navy:hover {
+            background: #06182e;
+            transform: translateY(-2px);
+        }
+
+        /* ===== HERO SECTION ===== */
+        .hero {
+            position: relative;
+            padding: 5rem 0;
+            background: linear-gradient(rgba(10, 35, 66, 0.85), rgba(10, 35, 66, 0.9)), 
+                        url('https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover;
+            color: var(--white);
+            border-bottom: 5px solid var(--gold);
+        }
+
+        .hero-content {
+            max-width: 800px;
+            text-align: center;
+            margin: 0 auto;
+        }
+
+        .hero-badge {
+            background: var(--gold);
+            color: var(--navy);
+            padding: 0.4rem 1.2rem;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            display: inline-block;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            line-height: 1.2;
+            margin-bottom: 1.5rem;
+            letter-spacing: -1px;
+        }
+
+        .hero h1 span {
+            color: var(--gold);
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: #d1d9e2;
+            margin-bottom: 2.5rem;
+            font-weight: 400;
+        }
+
+        .hero-actions {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+        }
+
+        /* ===== FEATURED LISTING (From Flyer) ===== */
+        .featured-section {
+            padding: 5rem 0;
+            background: var(--white);
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 3.5rem;
+        }
+
+        .section-header h2 {
+            font-size: 2.2rem;
+            color: var(--navy);
+            font-weight: 800;
+            text-transform: uppercase;
+            margin-bottom: 0.5rem;
+        }
+
+        .section-header p {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+        }
+
+        .listing-card {
+            display: flex;
+            flex-wrap: wrap;
+            background: var(--white);
+            border-radius: 12px;
+            box-shadow: 0 20px 40px rgba(10, 35, 66, 0.08);
+            overflow: hidden;
+            border: 1px solid #eee;
+        }
+
+        .listing-image {
+            flex: 1 1 500px;
+            position: relative;
+            min-height: 400px;
+            background: url('https://images.unsplash.com/photo-1512917774080-9991f1c4c750?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80') center/cover;
+        }
+
+        .image-badge {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background: var(--gold);
+            color: var(--navy);
+            padding: 0.5rem 1rem;
+            font-weight: 800;
+            font-family: 'Montserrat', sans-serif;
+            border-radius: 4px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .listing-details {
+            flex: 1 1 400px;
+            padding: 3rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .listing-details h3 {
+            font-size: 2.2rem;
+            color: var(--navy);
+            font-weight: 800;
+            margin-bottom: 0.5rem;
+        }
+
+        .listing-details .location {
+            color: var(--gold);
+            font-weight: 600;
+            font-size: 1.1rem;
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .features-list {
+            list-style: none;
+            margin-bottom: 2rem;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
+
+        .features-list li {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            font-weight: 600;
+            color: var(--text-dark);
+        }
+
+        .features-list li i {
+            color: var(--gold);
+            background: var(--gold-light);
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.7rem;
+        }
+
+        .call-box {
+            background: var(--gold);
+            padding: 1.5rem;
+            border-radius: 8px;
+            text-align: center;
+            margin-top: 1rem;
+        }
+
+        .call-box p {
+            color: var(--navy);
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 0.5rem;
+        }
+
+        .call-box h4 {
+            color: var(--navy);
+            font-size: 1.8rem;
+            font-weight: 800;
+        }
+
+        /* ===== GALLERY (Leafy Suburbs) ===== */
+        .gallery-section {
+            padding: 5rem 0;
+            background: var(--bg-light);
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .gallery-item {
+            border-radius: 12px;
+            overflow: hidden;
+            position: relative;
+            height: 350px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.05);
+        }
+
+        .gallery-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            padding: 2rem 1.5rem;
+            background: linear-gradient(to top, rgba(10,35,66,0.9), transparent);
+            color: var(--white);
+        }
+
+        .gallery-overlay h4 {
+            font-size: 1.2rem;
+            font-weight: 700;
+        }
+
+        .gallery-overlay p {
+            color: var(--gold);
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+
+        /* ===== FOOTER ===== */
+        .footer {
+            background: var(--navy);
+            color: var(--white);
+            padding: 4rem 0 2rem;
+            border-top: 5px solid var(--gold);
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .footer-col h4 {
+            color: var(--gold);
+            font-size: 1.2rem;
+            margin-bottom: 1.5rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .footer-col p {
+            color: #a0b2c4;
+            margin-bottom: 0.8rem;
+            display: flex;
+            align-items: flex-start;
+            gap: 0.8rem;
+        }
+
+        .footer-col p i {
+            color: var(--gold);
+            margin-top: 5px;
+        }
+
+        .footer-col a {
+            color: #a0b2c4;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .footer-col a:hover {
+            color: var(--gold);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            color: #a0b2c4;
+            font-size: 0.85rem;
+        }
+
+        .footer-bottom span {
+            color: var(--gold);
+            font-weight: 600;
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 992px) {
+            .hero h1 { font-size: 2.8rem; }
+            .listing-details { padding: 2rem; }
+        }
+
+        @media (max-width: 768px) {
+            .navbar { flex-direction: column; text-align: center; }
+            .nav-contact { flex-direction: column; gap: 0.8rem; width: 100%; }
+            .nav-contact .phone-link { justify-content: center; }
+            .hero h1 { font-size: 2.2rem; }
+            .hero-actions { flex-direction: column; }
+            .features-list { grid-template-columns: 1fr; }
+            .top-bar span { display: block; margin: 0.2rem 0; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Top Contact Bar -->
+    <div class="top-bar">
+        <span><i class="fas fa-map-marker-alt"></i> P.O. Box 7010-00200, Nairobi</span>
+        <span><i class="fas fa-phone-alt"></i> 0741 562 122 / 0719 270 827</span>
+        <span><i class="fas fa-envelope"></i> info@starrealtors.co.ke</span>
+    </div>
+
+    <!-- Navigation -->
+    <div class="container">
+        <nav class="navbar">
+            <div class="logo-container">
+                <!-- Custom SVG/CSS Logo to match the uploaded seal -->
+                <div class="logo-mark">
+                    <div class="logo-house"></div>
+                </div>
+                <div class="brand-text">
+                    <div class="title">STAR REALTORS LTD</div>
+                    <div class="subtitle">Property Managers</div>
+                </div>
+            </div>
+            
+            <div class="nav-contact">
+                <a href="tel:0741562122" class="phone-link">
+                    <i class="fas fa-phone-alt"></i> 0741 562 122
+                </a>
+                <a href="tel:0719270827" class="phone-link">
+                    <i class="fas fa-phone-alt"></i> 0719 270 827
+                </a>
+                <a href="#contact" class="btn btn-gold">Book Viewing</a>
+            </div>
+        </nav>
+    </div>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="container hero-content">
+            <div class="hero-badge">Now Vacant · Nairobi</div>
+            <h1>Find Your <span>Dream</span> Home in the Leafy Suburbs</h1>
+            <p>Experience premium living with Star Realtors Ltd. We connect you to secure, spacious, and modern high-rise residentials in Nairobi's most serene neighborhoods.</p>
+            <div class="hero-actions">
+                <a href="#featured" class="btn btn-gold">View Vacant Houses</a>
+                <a href="https://wa.me/254741562122" target="_blank" class="btn btn-navy" style="background: #25D366; color: white; border:none;"><i class="fab fa-whatsapp" style="margin-right: 8px; font-size: 1.2rem;"></i> WhatsApp Us</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Featured Listing (From Flyer) -->
+    <section class="featured-section" id="featured">
+        <div class="container">
+            <div class="section-header">
+                <h2>Featured Property</h2>
+                <p>Spacious 2-Bedroom Apartments available now</p>
+            </div>
+
+            <div class="listing-card">
+                <div class="listing-image">
+                    <div class="image-badge">House To Let</div>
+                </div>
+                <div class="listing-details">
+                    <h3>2 Bedrooms Very Spacious</h3>
+                    <div class="location"><i class="fas fa-map-marker-alt"></i> Nairobi, Kenya</div>
+                    
+                    <ul class="features-list">
+                        <li><i class="fas fa-check"></i> 2 Bedrooms Very Spacious</li>
+                        <li><i class="fas fa-check"></i> Highly Secure</li>
+                        <li><i class="fas fa-check"></i> Water Available</li>
+                        <li><i class="fas fa-check"></i> Electricity Tokens</li>
+                        <li><i class="fas fa-check"></i> Clean Compound</li>
+                        <li><i class="fas fa-check"></i> Ample Parking</li>
+                    </ul>
+
+                    <div class="call-box">
+                        <p>Call / WhatsApp Now!</p>
+                        <h4>0741 562 122</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section (Leafy Suburbs & Highrises) -->
+    <section class="gallery-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Neighborhoods</h2>
+                <p>Discover modern high-rise living surrounded by nature</p>
+            </div>
+            
+            <div class="gallery-grid">
+                <!-- Image 1 -->
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Luxury Apartment">
+                    <div class="gallery-overlay">
+                        <h4>Kilimani Heights</h4>
+                        <p>Modern Living</p>
+                    </div>
+                </div>
+                <!-- Image 2 -->
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Green Suburbs">
+                    <div class="gallery-overlay">
+                        <h4>Lavington Green</h4>
+                        <p>Leafy & Secure</p>
+                    </div>
+                </div>
+                <!-- Image 3 -->
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Highrise Residential">
+                    <div class="gallery-overlay">
+                        <h4>Westlands View</h4>
+                        <p>Urban Convenience</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer" id="contact">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>STAR REALTORS LTD</h4>
+                    <p style="margin-bottom: 1.5rem; color: #d1d9e2;">Your trusted partner in finding premium, secure, and leafy residential spaces in Nairobi.</p>
+                    <div class="logo-mark" style="border-color: var(--white); background: transparent; transform: scale(0.8); margin-left: -10px;">
+                        <div class="logo-house" style="background-color: var(--white);"></div>
+                    </div>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Contact Us</h4>
+                    <p><i class="fas fa-map-marker-alt"></i> P.O. Box 7010-00200, Nairobi</p>
+                    <p><i class="fas fa-phone-alt"></i> <a href="tel:0741562122">0741 562 122</a></p>
+                    <p><i class="fas fa-phone-alt"></i> <a href="tel:0719270827">0719 270 827</a></p>
+                    <p><i class="fas fa-envelope"></i> <a href="mailto:info@starrealtors.co.ke">info@starrealtors.co.ke</a></p>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <p><a href="#featured"><i class="fas fa-chevron-right" style="font-size: 0.8rem;"></i> Vacant Houses</a></p>
+                    <p><a href="#featured"><i class="fas fa-chevron-right" style="font-size: 0.8rem;"></i> Property Management</a></p>
+                    <p><a href="#contact"><i class="fas fa-chevron-right" style="font-size: 0.8rem;"></i> Book a Viewing</a></p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                &copy; 2024 <span>STAR REALTORS LTD</span>. All Rights Reserved. | Registered to Stephen Omondi Owino
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
