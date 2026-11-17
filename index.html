@@ -97,36 +97,11 @@
             width: 76px;
             height: 76px;
             flex: 0 0 auto;
-        }
-
-        .logo-ring {
-            fill: var(--white);
-            stroke: var(--navy);
-            stroke-width: 1.5;
-        }
-
-        .logo-arc {
-            fill: none;
-        }
-
-        .logo-arc-text {
-            fill: var(--navy);
-            font-family: 'Montserrat', sans-serif;
-            font-size: 5.6px;
-            font-weight: 800;
-            letter-spacing: 0.55px;
-        }
-
-        .logo-star {
-            fill: var(--gold);
-        }
-
-        .logo-house {
-            fill: var(--navy);
-        }
-
-        .logo-door {
-            fill: var(--gold-light);
+            border: 1px solid rgba(10, 35, 66, 0.12);
+            border-radius: 50%;
+            background: var(--white);
+            object-fit: cover;
+            object-position: center 50%;
         }
 
         .brand-text {
@@ -172,17 +147,8 @@
             height: 56px;
         }
 
-        .footer-brand .logo-ring {
-            fill: transparent;
-            stroke: var(--white);
-        }
-
-        .footer-brand .logo-house {
-            fill: var(--white);
-        }
-
-        .footer-brand .logo-door {
-            fill: var(--navy);
+        .footer-brand .logo-mark {
+            border-color: rgba(255, 255, 255, 0.35);
         }
 
         .nav-links {
@@ -582,6 +548,16 @@
             pointer-events: none;
         }
 
+        .founder-portrait {
+            display: block;
+            width: 100%;
+            aspect-ratio: 1.35 / 1;
+            object-fit: cover;
+            object-position: center 57%;
+            border-radius: 9px;
+            margin-bottom: 1.5rem;
+        }
+
         .founder-note-label {
             color: #e3bc68;
             display: block;
@@ -829,19 +805,7 @@
     <div class="container">
         <nav class="navbar" aria-label="Main navigation" id="top">
             <a class="logo-container" href="#top" aria-label="Star Realtors Ltd home">
-                <svg class="logo-mark" viewBox="0 0 88 88" role="img" aria-labelledby="logo-title">
-                    <title id="logo-title">Star Realtors Property Managers logo</title>
-                    <defs>
-                        <path id="logo-top-arc" d="M 13 43 A 31 31 0 0 1 75 43" />
-                        <path id="logo-bottom-arc" d="M 75 48 A 31 31 0 0 1 13 48" />
-                    </defs>
-                    <circle class="logo-ring" cx="44" cy="44" r="41" />
-                    <text class="logo-arc-text"><textPath href="#logo-top-arc" startOffset="50%" text-anchor="middle">STAR REALTORS</textPath></text>
-                    <text class="logo-arc-text"><textPath href="#logo-bottom-arc" startOffset="50%" text-anchor="middle">PROPERTY MANAGERS</textPath></text>
-                    <path class="logo-star" d="M44 25l2.8 5.7 6.3.9-4.6 4.4 1.1 6.2-5.6-3-5.6 3 1.1-6.2-4.6-4.4 6.3-.9z" />
-                    <path class="logo-house" d="M29 47.5 44 36l15 11.5v15H29z" />
-                    <path class="logo-door" d="M40.5 53h7v9.5h-7z" />
-                </svg>
+                <img class="logo-mark" src="/images/star-realtors-original-logo.jpg" alt="Original Star Realtors Ltd seal logo with a star and house">
                 <span class="brand-text">
                     <span class="title">STAR REALTORS LTD</span>
                     <span class="subtitle">Property Managers</span>
@@ -891,6 +855,7 @@
                 <a href="#partner" class="btn btn-gold">Partner with Star Realtors</a>
             </div>
             <aside class="founder-note" aria-label="The founder’s vision">
+                <img class="founder-portrait" src="/images/founder-steven-owino.jpg" alt="Portrait of Hon. Steven Owino Omondi, founder of Star Realtors Ltd">
                 <span class="founder-note-label">A belief that guides us</span>
                 <blockquote>“The future is now.”</blockquote>
                 <p>Integrity, innovation, and dedicated service in every property we manage.</p>
@@ -1027,12 +992,7 @@
                     <h4>STAR REALTORS LTD</h4>
                     <p style="margin-bottom: 1.5rem; color: #d1d9e2;">Your trusted partner in finding premium, secure, and leafy residential spaces in Nairobi.</p>
                     <div class="footer-brand">
-                        <svg class="logo-mark" viewBox="0 0 88 88" aria-hidden="true">
-                            <circle class="logo-ring" cx="44" cy="44" r="41" />
-                            <path class="logo-star" d="M44 25l2.8 5.7 6.3.9-4.6 4.4 1.1 6.2-5.6-3-5.6 3 1.1-6.2-4.6-4.4 6.3-.9z" />
-                            <path class="logo-house" d="M29 47.5 44 36l15 11.5v15H29z" />
-                            <path class="logo-door" d="M40.5 53h7v9.5h-7z" />
-                        </svg>
+                        <img class="logo-mark" src="/images/star-realtors-original-logo.jpg" alt="">
                         <span>Hon. Steven Owino Omondi, Founder</span>
                     </div>
                 </div>
