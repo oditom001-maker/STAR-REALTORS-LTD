@@ -1,0 +1,366 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0a2342">
+  <meta name="description" content="Explore available two-bedroom homes at D42 Riverside Court in Obama Estate, Nairobi. Contact Star Realtors Ltd to arrange a viewing.">
+  <title>D42 Riverside Court · Star Realtors Ltd</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Montserrat:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    :root {
+      color-scheme: light;
+      --navy: #0a2342;
+      --navy-deep: #071a31;
+      --gold: #c99b3b;
+      --gold-light: #f4e8d1;
+      --paper: #f7f8fa;
+      --white: #fff;
+      --ink: #26384b;
+      --muted: #6e7d8d;
+      --line: #e7ebef;
+      --sans: 'DM Sans', sans-serif;
+      --display: 'Montserrat', sans-serif;
+      --shadow: 0 18px 48px rgba(10, 35, 66, .12);
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: 104px; }
+    body { margin: 0; color: var(--ink); background: var(--paper); font: 16px/1.65 var(--sans); }
+    img { display: block; max-width: 100%; }
+    a { color: inherit; }
+    button { font: inherit; }
+    .container { width: min(1160px, calc(100% - 40px)); margin-inline: auto; }
+    .skip-link { position: absolute; z-index: 100; top: -60px; left: 16px; padding: 10px 14px; color: var(--white); background: var(--navy); }
+    .skip-link:focus { top: 12px; }
+
+    .topbar { color: #eaf0f5; background: var(--navy-deep); font-size: .78rem; }
+    .topbar-inner { display: flex; align-items: center; justify-content: space-between; min-height: 38px; gap: 16px; }
+    .topbar-item { display: inline-flex; align-items: center; gap: 8px; }
+    .topbar i { color: var(--gold); }
+
+    .site-header { position: sticky; z-index: 20; top: 0; background: rgba(255,255,255,.97); border-bottom: 1px solid rgba(10,35,66,.08); backdrop-filter: blur(12px); }
+    .nav-inner { display: flex; min-height: 86px; align-items: center; justify-content: space-between; gap: 24px; }
+    .brand { display: inline-flex; align-items: center; gap: 12px; text-decoration: none; }
+    .brand-seal { width: 58px; height: 58px; flex: 0 0 auto; overflow: hidden; border: 1px solid #e4e2dc; border-radius: 50%; background: #fff; }
+    .brand-seal img { width: 100%; height: 100%; object-fit: cover; object-position: center; }
+    .brand-title { display: block; color: var(--navy); font: 800 1.05rem/1.2 var(--display); letter-spacing: -.04em; }
+    .brand-subtitle { display: block; margin-top: 4px; color: #9b7425; font: 700 .6rem/1 var(--display); letter-spacing: .17em; text-transform: uppercase; }
+    .nav-links { display: flex; align-items: center; gap: 25px; }
+    .nav-links > a:not(.button) { color: #42556a; font-size: .88rem; font-weight: 600; text-decoration: none; }
+    .nav-links > a:not(.button):hover { color: #986c16; }
+    .button { display: inline-flex; min-height: 46px; align-items: center; justify-content: center; gap: 9px; padding: 0 18px; border: 1px solid transparent; border-radius: 4px; background: var(--gold); color: var(--navy); font: 700 .78rem var(--display); letter-spacing: .02em; text-decoration: none; transition: transform .2s ease, background .2s ease; }
+    .button:hover { transform: translateY(-2px); background: #d8ae5b; }
+    .button-dark { color: var(--white); background: var(--navy); }
+    .button-dark:hover { background: #12375d; }
+    a:focus-visible, button:focus-visible { outline: 3px solid #e1b958; outline-offset: 3px; }
+
+    .hero { position: relative; display: grid; min-height: 560px; align-items: center; overflow: hidden; color: var(--white); background: var(--navy); isolation: isolate; }
+    .hero::before { position: absolute; z-index: -2; inset: 0; content: ''; background: url('https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_20261114_164937_1-0HUbfrArsk4GCokn7V0myUmKbE733v.jpg') center 43% / cover; transform: scale(1.02); }
+    .hero::after { position: absolute; z-index: -1; inset: 0; content: ''; background: linear-gradient(90deg, rgba(5,20,39,.91), rgba(7,26,49,.75) 55%, rgba(7,26,49,.28)); }
+    .hero-copy { max-width: 720px; padding: 84px 0 92px; }
+    .eyebrow { display: inline-flex; align-items: center; gap: 9px; padding: 7px 13px; border-radius: 100px; background: var(--gold); color: var(--navy); font: 700 .67rem var(--display); letter-spacing: .12em; text-transform: uppercase; }
+    .hero h1 { margin: 22px 0 15px; font: 800 clamp(2.6rem, 6vw, 4.7rem)/1.08 var(--display); letter-spacing: -.065em; }
+    .hero h1 span { color: #e3bd68; }
+    .hero p { max-width: 590px; margin: 0; color: #e0e7ee; font-size: 1.08rem; }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 27px; }
+    .hero .button-outline { border-color: rgba(255,255,255,.62); color: white; background: rgba(255,255,255,.08); }
+    .hero .button-outline:hover { color: var(--navy); background: white; }
+    .hero-note { display: flex; align-items: center; gap: 9px; margin-top: 31px; color: #d2dae3; font-size: .83rem; }
+    .hero-note i { color: var(--gold); }
+
+    .section { padding: 82px 0; }
+    .section-heading { max-width: 660px; margin: 0 auto 38px; text-align: center; }
+    .kicker { color: #9b7425; font: 700 .67rem var(--display); letter-spacing: .2em; text-transform: uppercase; }
+    .section-heading h2 { margin: 8px 0 9px; color: var(--navy); font: 800 clamp(1.8rem, 4vw, 2.65rem)/1.15 var(--display); letter-spacing: -.05em; }
+    .section-heading p { margin: 0; color: var(--muted); }
+
+    .property-section { background: var(--white); }
+    .property-card { display: grid; grid-template-columns: 1.05fr .95fr; overflow: hidden; border: 1px solid var(--line); border-radius: 10px; background: var(--white); box-shadow: var(--shadow); }
+    .property-image { position: relative; min-height: 445px; overflow: hidden; background: #d8dce1; }
+    .property-image img { width: 100%; height: 100%; position: absolute; inset: 0; object-fit: cover; object-position: center 42%; }
+    .property-tag { position: absolute; top: 20px; left: 20px; padding: 7px 12px; border-radius: 3px; background: var(--gold); color: var(--navy); font: 700 .65rem var(--display); letter-spacing: .12em; text-transform: uppercase; }
+    .property-info { display: flex; flex-direction: column; justify-content: center; padding: clamp(28px, 5vw, 54px); }
+    .property-info h3 { margin: 0; color: var(--navy); font: 800 clamp(1.65rem, 3.3vw, 2.3rem)/1.15 var(--display); letter-spacing: -.05em; }
+    .property-location { display: flex; align-items: center; gap: 9px; margin: 12px 0 23px; color: #98701d; font-weight: 700; }
+    .property-location i { color: var(--gold); }
+    .property-features { display: grid; grid-template-columns: 1fr 1fr; gap: 12px 14px; margin: 0 0 27px; padding: 0; list-style: none; }
+    .property-features li { display: flex; align-items: center; gap: 9px; color: #405166; font-size: .88rem; font-weight: 600; }
+    .check { display: grid; width: 21px; height: 21px; flex: 0 0 auto; place-items: center; border-radius: 50%; color: #8a671e; background: var(--gold-light); font-size: .63rem; }
+    .property-cta { display: flex; flex-wrap: wrap; align-items: center; gap: 14px; padding-top: 20px; border-top: 1px solid var(--line); }
+    .property-cta small { color: var(--muted); font-size: .76rem; }
+
+    .gallery-section { background: var(--paper); }
+    .gallery-grid { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 16px; }
+    .photo-card { position: relative; display: block; width: 100%; aspect-ratio: 1.12; overflow: hidden; padding: 0; border: 0; border-radius: 7px; background: #dfe3e7; cursor: zoom-in; text-align: left; }
+    .photo-card img { width: 100%; height: 100%; object-fit: cover; transition: transform .45s ease; }
+    .photo-card:hover img { transform: scale(1.045); }
+    .photo-card::after { position: absolute; inset: 40% 0 0; content: ''; background: linear-gradient(transparent, rgba(6,22,42,.82)); pointer-events: none; }
+    .photo-caption { position: absolute; z-index: 1; right: 16px; bottom: 13px; left: 16px; display: flex; align-items: center; justify-content: space-between; gap: 8px; color: white; font-size: .82rem; font-weight: 700; }
+    .photo-caption i { color: #f0ca72; }
+    .gallery-hint { margin: 17px 0 0; color: var(--muted); font-size: .8rem; text-align: center; }
+
+    .founder-section { position: relative; overflow: hidden; color: white; background: var(--navy); }
+    .founder-section::before { position: absolute; top: -200px; right: -100px; width: 430px; height: 430px; border: 1px solid rgba(201,155,59,.22); border-radius: 50%; content: ''; }
+    .founder-layout { position: relative; display: grid; grid-template-columns: minmax(260px,.78fr) 1.22fr; align-items: center; gap: clamp(35px, 7vw, 88px); }
+    .founder-photo-wrap { position: relative; max-width: 380px; margin-inline: auto; }
+    .founder-photo-wrap::after { position: absolute; z-index: 0; inset: 14px -14px -14px 14px; border: 1px solid var(--gold); border-radius: 7px; content: ''; }
+    .founder-photo { position: relative; z-index: 1; width: 100%; aspect-ratio: 1 / 1; overflow: hidden; border-radius: 7px; background: #d8d8d8; }
+    .founder-photo img { width: 100%; height: 100%; object-fit: cover; object-position: center 55%; filter: grayscale(1); }
+    .founder-copy .kicker { color: #e3bd68; }
+    .founder-copy h2 { margin: 9px 0 16px; color: white; font: 800 clamp(1.9rem, 4vw, 2.8rem)/1.13 var(--display); letter-spacing: -.05em; }
+    .founder-copy h2 span { color: #e3bd68; }
+    .founder-copy p { max-width: 600px; margin: 0 0 14px; color: #d5dee7; }
+    .founder-quote { display: block; margin: 21px 0; padding-left: 16px; border-left: 3px solid var(--gold); color: #f1d28a; font: 600 1.08rem var(--display); }
+    .founder-contact { display: inline-flex; align-items: center; gap: 10px; margin-top: 8px; color: white; font-weight: 700; text-decoration: none; }
+    .founder-contact i { color: var(--gold); }
+
+    .testimonials { background: white; }
+    .quote-grid { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 18px; }
+    .quote-card { padding: 25px; border: 1px solid var(--line); border-radius: 7px; background: #fff; box-shadow: 0 10px 30px rgba(10,35,66,.04); }
+    .quote-stars { color: var(--gold); font-size: .8rem; letter-spacing: .14em; }
+    .quote-card blockquote { margin: 13px 0 18px; color: #425369; font-size: .95rem; }
+    .quote-card cite { color: var(--navy); font-size: .82rem; font-style: normal; font-weight: 700; }
+
+    .footer { padding: 50px 0 20px; border-top: 4px solid var(--gold); color: #c7d2dd; background: var(--navy-deep); }
+    .footer-grid { display: grid; grid-template-columns: 1.2fr 1fr 1fr; gap: 35px; padding-bottom: 34px; }
+    .footer h2 { margin: 0 0 14px; color: var(--gold); font: 700 .82rem var(--display); letter-spacing: .12em; text-transform: uppercase; }
+    .footer-brand { display: flex; align-items: center; gap: 12px; color: white; font: 800 1rem var(--display); }
+    .footer-brand img { width: 48px; height: 48px; border-radius: 50%; object-fit: cover; }
+    .footer-copy { max-width: 330px; margin: 14px 0 0; color: #aebdcb; font-size: .86rem; }
+    .footer-list { display: grid; gap: 9px; margin: 0; padding: 0; list-style: none; }
+    .footer-list li, .footer-list a { color: #c7d2dd; font-size: .85rem; text-decoration: none; }
+    .footer-list a:hover { color: #f0ca72; }
+    .footer-list i { width: 20px; color: var(--gold); }
+    .copyright { padding-top: 17px; border-top: 1px solid rgba(255,255,255,.13); color: #9cadbd; font-size: .76rem; text-align: center; }
+    .copyright strong { color: var(--gold); }
+
+    .photo-dialog { width: min(92vw, 1050px); max-width: none; max-height: 92vh; padding: 12px; border: 0; border-radius: 9px; color: white; background: #071a31; box-shadow: 0 24px 80px rgba(0,0,0,.45); }
+    .photo-dialog::backdrop { background: rgba(4,13,23,.82); backdrop-filter: blur(4px); }
+    .dialog-top { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 1px 2px 9px; }
+    .dialog-caption { margin: 0; font-size: .86rem; font-weight: 600; }
+    .dialog-close { display: grid; width: 38px; height: 38px; place-items: center; border: 1px solid rgba(255,255,255,.22); border-radius: 50%; color: white; background: transparent; cursor: pointer; }
+    .dialog-image { width: 100%; max-height: calc(92vh - 72px); border-radius: 5px; object-fit: contain; background: #071a31; }
+
+    @media (max-width: 850px) {
+      .nav-links { gap: 14px; }
+      .nav-links > a:not(.button) { display: none; }
+      .property-card { grid-template-columns: 1fr; }
+      .property-image { min-height: 390px; }
+      .founder-layout { grid-template-columns: minmax(220px,.8fr) 1.2fr; gap: 42px; }
+      .gallery-grid { grid-template-columns: repeat(2,minmax(0,1fr)); }
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+      .footer-grid > div:first-child { grid-column: 1 / -1; }
+    }
+    @media (max-width: 600px) {
+      .container { width: min(100% - 32px, 1160px); }
+      .topbar-inner { min-height: 35px; justify-content: center; }
+      .topbar-item:first-child { display: none; }
+      .nav-inner { min-height: 72px; gap: 10px; }
+      .brand-seal { width: 47px; height: 47px; }
+      .brand-title { font-size: .9rem; }
+      .brand-subtitle { font-size: .55rem; letter-spacing: .12em; }
+      .nav-links .button { min-height: 40px; padding-inline: 12px; font-size: .66rem; }
+      .hero { min-height: 560px; }
+      .hero::before { background-position: 53% center; }
+      .hero::after { background: linear-gradient(90deg, rgba(5,20,39,.87), rgba(7,26,49,.64)); }
+      .hero-copy { padding: 75px 0; }
+      .hero h1 { font-size: clamp(2.4rem, 12vw, 3.55rem); }
+      .hero p { font-size: .97rem; }
+      .hero-actions { flex-direction: column; align-items: stretch; max-width: 330px; }
+      .hero-actions .button { width: 100%; }
+      .section { padding: 60px 0; }
+      .section-heading { margin-bottom: 27px; }
+      .property-image { min-height: 300px; }
+      .property-info { padding: 27px 21px; }
+      .property-features { grid-template-columns: 1fr; gap: 10px; }
+      .property-cta { align-items: stretch; flex-direction: column; }
+      .property-cta .button { width: 100%; }
+      .gallery-grid { gap: 10px; }
+      .photo-card { aspect-ratio: .86; }
+      .photo-caption { right: 9px; bottom: 9px; left: 9px; align-items: flex-end; font-size: .72rem; }
+      .founder-layout { grid-template-columns: 1fr; gap: 37px; }
+      .founder-photo-wrap { width: min(76%, 310px); }
+      .founder-copy h2 { font-size: 2.1rem; }
+      .quote-grid { grid-template-columns: 1fr; }
+      .quote-card { padding: 21px; }
+      .footer-grid { grid-template-columns: 1fr; gap: 25px; }
+      .footer-grid > div:first-child { grid-column: auto; }
+      .footer { padding-top: 40px; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="topbar" aria-label="Contact information">
+    <div class="container topbar-inner">
+      <span class="topbar-item"><i class="fa-solid fa-location-dot" aria-hidden="true"></i>P.O. Box 7010-00200, Nairobi</span>
+      <a class="topbar-item" href="tel:0741562122" style="color:inherit;text-decoration:none"><i class="fa-solid fa-phone" aria-hidden="true"></i>0741 562 122</a>
+      <a class="topbar-item" href="mailto:info@starrealtors.co.ke" style="color:inherit;text-decoration:none"><i class="fa-regular fa-envelope" aria-hidden="true"></i>info@starrealtors.co.ke</a>
+    </div>
+  </div>
+
+  <header class="site-header">
+    <div class="container nav-inner">
+      <a class="brand" href="#home" aria-label="Star Realtors Ltd home">
+        <span class="brand-seal"><img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG-20261112-WA0015-De5a4gF07Uqzvg55xj5uVYXSKJLNhH.jpg" alt="Original Star Realtors Ltd navy and gold seal"></span>
+        <span><span class="brand-title">STAR REALTORS LTD</span><span class="brand-subtitle">Property managers · Nairobi</span></span>
+      </a>
+      <nav class="nav-links" aria-label="Main navigation">
+        <a href="#property">The property</a>
+        <a href="#gallery">Photos</a>
+        <a href="#founder">Our founder</a>
+        <a class="button" href="https://wa.me/254741562122?text=Hello%2C%20I%27m%20interested%20in%20a%20two-bedroom%20home%20at%20D42%20Riverside%20Court." target="_blank" rel="noopener noreferrer">Arrange a viewing <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="home" aria-labelledby="hero-title">
+      <div class="container">
+        <div class="hero-copy">
+          <span class="eyebrow"><i class="fa-solid fa-house" aria-hidden="true"></i> Two-bedroom homes available</span>
+          <h1 id="hero-title">Make your next move to <span>Obama Estate.</span></h1>
+          <p>Discover available two-bedroom homes at D42 Riverside Court. Star Realtors Ltd is here to help you find a comfortable place to call home.</p>
+          <div class="hero-actions">
+            <a class="button" href="#property">Explore D42 Riverside Court <i class="fa-solid fa-arrow-down" aria-hidden="true"></i></a>
+            <a class="button button-outline" href="https://wa.me/254741562122?text=Hello%2C%20I%27d%20like%20to%20ask%20about%20available%20two-bedroom%20homes%20at%20D42%20Riverside%20Court." target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i> WhatsApp us</a>
+          </div>
+          <div class="hero-note"><i class="fa-solid fa-location-dot" aria-hidden="true"></i>D42 Riverside Court · Obama Estate · Nairobi</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section property-section" id="property" aria-labelledby="property-title">
+      <div class="container">
+        <div class="section-heading"><span class="kicker">Your next home</span><h2 id="property-title">Life at D42 Riverside Court</h2><p>Explore the property and its available two-bedroom homes in Obama Estate.</p></div>
+        <article class="property-card">
+          <div class="property-image">
+            <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_20261114_164937_1-0HUbfrArsk4GCokn7V0myUmKbE733v.jpg" alt="Exterior of D42 Riverside Court in Obama Estate" fetchpriority="high">
+            <span class="property-tag">Available now</span>
+          </div>
+          <div class="property-info">
+            <span class="kicker">D42 Riverside Court</span>
+            <h3>Two-bedroom homes in Obama Estate</h3>
+            <div class="property-location"><i class="fa-solid fa-location-dot" aria-hidden="true"></i>Obama Estate, Nairobi, Kenya</div>
+            <ul class="property-features">
+              <li><span class="check"><i class="fa-solid fa-check" aria-hidden="true"></i></span>Two spacious bedrooms</li>
+              <li><span class="check"><i class="fa-solid fa-check" aria-hidden="true"></i></span>Secure property</li>
+              <li><span class="check"><i class="fa-solid fa-check" aria-hidden="true"></i></span>Water available</li>
+              <li><span class="check"><i class="fa-solid fa-check" aria-hidden="true"></i></span>Prepaid electricity</li>
+              <li><span class="check"><i class="fa-solid fa-check" aria-hidden="true"></i></span>Clean compound</li>
+              <li><span class="check"><i class="fa-solid fa-check" aria-hidden="true"></i></span>Parking available</li>
+            </ul>
+            <div class="property-cta">
+              <a class="button button-dark" href="https://wa.me/254741562122?text=Hello%2C%20I%27d%20like%20to%20arrange%20a%20viewing%20for%20a%20two-bedroom%20home%20at%20D42%20Riverside%20Court." target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i> Enquire or book a viewing</a>
+              <small>Call Star Realtors: <a href="tel:0741562122">0741 562 122</a></small>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section gallery-section" id="gallery" aria-labelledby="gallery-title">
+      <div class="container">
+        <div class="section-heading"><span class="kicker">See it for yourself</span><h2 id="gallery-title">Photos of D42 Riverside Court</h2><p>Recent photos of the building, shared spaces, and available homes. Select any photo to view it larger.</p></div>
+        <div class="gallery-grid">
+          <button class="photo-card" type="button" data-full="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_20261114_164937_1-0HUbfrArsk4GCokn7V0myUmKbE733v.jpg" data-caption="D42 Riverside Court — exterior"><img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_20261114_164937_1-0HUbfrArsk4GCokn7V0myUmKbE733v.jpg" alt="Multi-storey exterior of D42 Riverside Court" loading="lazy"><span class="photo-caption">Building exterior <i class="fa-solid fa-up-right-and-down-left-from-center" aria-hidden="true"></i></span></button>
+          <button class="photo-card" type="button" data-full="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_20261106_114645_9-XcZOzq0aykKRLNt8MHpqyiJ48cEAit.jpg" data-caption="The approach to D42 Riverside Court"><img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_20261106_114645_9-XcZOzq0aykKRLNt8MHpqyiJ48cEAit.jpg" alt="Paved access road leading toward D42 Riverside Court" loading="lazy"><span class="photo-caption">Estate access <i class="fa-solid fa-up-right-and-down-left-from-center" aria-hidden="true"></i></span></button>
+          <button class="photo-card" type="button" data-full="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_20261106_114510_3-EhWkcTj7eV1dvYf8LgN7VK0LNTFUwK.jpg" data-caption="Shared entrance corridor"><img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_20261106_114510_3-EhWkcTj7eV1dvYf8LgN7VK0LNTFUwK.jpg" alt="Shared entrance corridor at the property" loading="lazy"><span class="photo-caption">Shared entrance <i class="fa-solid fa-up-right-and-down-left-from-center" aria-hidden="true"></i></span></button>
+          <button class="photo-card" type="button" data-full="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_20261106_114516_9-HEkxI2Akv9eYJvyJHM1zfqaA5sWbWU.jpg" data-caption="Interior access corridor"><img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_20261106_114516_9-HEkxI2Akv9eYJvyJHM1zfqaA5sWbWU.jpg" alt="Interior corridor and apartment access doors" loading="lazy"><span class="photo-caption">Interior corridor <i class="fa-solid fa-up-right-and-down-left-from-center" aria-hidden="true"></i></span></button>
+          <button class="photo-card" type="button" data-full="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_20261105_103619_4-pTN1B6W55f7fRZGgrZdz1WleIdOLrM.jpg" data-caption="Available bedroom"><img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_20261105_103619_4-pTN1B6W55f7fRZGgrZdz1WleIdOLrM.jpg" alt="Bright empty bedroom with a window and tiled floor" loading="lazy"><span class="photo-caption">Available home <i class="fa-solid fa-up-right-and-down-left-from-center" aria-hidden="true"></i></span></button>
+          <button class="photo-card" type="button" data-full="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_20261105_102421_5-V1Ip7JbhMvV7WNIuV5AhMztXxqt78I.jpg" data-caption="Room and doorway in an available home"><img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_20261105_102421_5-V1Ip7JbhMvV7WNIuV5AhMztXxqt78I.jpg" alt="Interior room with tiled floor and doorway" loading="lazy"><span class="photo-caption">Available home <i class="fa-solid fa-up-right-and-down-left-from-center" aria-hidden="true"></i></span></button>
+          <button class="photo-card" type="button" data-full="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_20261105_103620_0-YVu6APLybj9knOpqXGA5MAEAr5tpEx.jpg" data-caption="Bedroom interior"><img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_20261105_103620_0-YVu6APLybj9knOpqXGA5MAEAr5tpEx.jpg" alt="Bedroom with fitted wardrobe and tiled floor" loading="lazy"><span class="photo-caption">Bedroom interior <i class="fa-solid fa-up-right-and-down-left-from-center" aria-hidden="true"></i></span></button>
+          <button class="photo-card" type="button" data-full="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_20261106_080227_2-W2jQT1nw2VGF9rwVPmVCWBYY1FLMfC.jpg" data-caption="Apartment entrance area"><img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_20261106_080227_2-W2jQT1nw2VGF9rwVPmVCWBYY1FLMfC.jpg" alt="Apartment entrance area and shared corridor" loading="lazy"><span class="photo-caption">Apartment entrance <i class="fa-solid fa-up-right-and-down-left-from-center" aria-hidden="true"></i></span></button>
+          <button class="photo-card" type="button" data-full="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_20261106_080220_6-4Xotr2MEcRK9jyDV1TjNdm5sjlJoQl.jpg" data-caption="Shared corridor and window"><img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_20261106_080220_6-4Xotr2MEcRK9jyDV1TjNdm5sjlJoQl.jpg" alt="Shared corridor with window and water storage drums" loading="lazy"><span class="photo-caption">Shared corridor <i class="fa-solid fa-up-right-and-down-left-from-center" aria-hidden="true"></i></span></button>
+          <button class="photo-card" type="button" data-full="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_20261106_080219_2-OXMxpglpAaj3PVQ9qwHjnkHynI7Mac.jpg" data-caption="Another view of the shared corridor"><img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_20261106_080219_2-OXMxpglpAaj3PVQ9qwHjnkHynI7Mac.jpg" alt="View down a shared apartment corridor" loading="lazy"><span class="photo-caption">Shared corridor <i class="fa-solid fa-up-right-and-down-left-from-center" aria-hidden="true"></i></span></button>
+        </div>
+        <p class="gallery-hint">Photos are of the actual D42 Riverside Court property and available homes.</p>
+      </div>
+    </section>
+
+    <section class="section founder-section" id="founder" aria-labelledby="founder-title">
+      <div class="container founder-layout">
+        <div class="founder-photo-wrap"><div class="founder-photo"><img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG-20261112-WA0102-NALaIvbgrluDDRYsxF0CqCorWVwYHG.jpg" alt="Star Realtors Ltd founder standing outside homes in Nairobi" loading="lazy"></div></div>
+        <div class="founder-copy">
+          <span class="kicker">The person behind Star Realtors</span>
+          <h2 id="founder-title">Meet our founder, <span>Hon. Steven Owino Omondi</span></h2>
+          <p>An ordained pastor and visionary leader, Hon. Steven Owino Omondi believes that “The future is now.” Under his leadership, Star Realtors manages government and non-government properties with professionalism.</p>
+          <p>His mission is to bring integrity, innovation, and dedicated service to real estate and property management.</p>
+          <span class="founder-quote">“The future is now.”</span>
+          <a class="founder-contact" href="tel:0741562122"><i class="fa-solid fa-phone" aria-hidden="true"></i>Speak with Star Realtors · 0741 562 122</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section testimonials" aria-labelledby="testimonials-title">
+      <div class="container">
+        <div class="section-heading"><span class="kicker">From our residents</span><h2 id="testimonials-title">What tenants are saying</h2><p>Feedback shared by residents at D42 Riverside Court.</p></div>
+        <div class="quote-grid">
+          <figure class="quote-card"><div class="quote-stars" aria-label="5 out of 5 stars">★★★★★</div><blockquote>“The new management has brought a level of change that no other management thought of implementing during their time in office. The building is fully renovated, there have been no rent increases, and we no longer experience water shortages.”</blockquote><figcaption><cite>James · Tenant at D42 Riverside Court</cite></figcaption></figure>
+          <figure class="quote-card"><div class="quote-stars" aria-label="5 out of 5 stars">★★★★★</div><blockquote>“We love the fact that the new management is here to listen to our complaints fully and find solutions for us. Security has never been a worry under Star Realtors’ new management.”</blockquote><figcaption><cite>Susan · Tenant</cite></figcaption></figure>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer" id="contact">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-brand"><img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG-20261112-WA0015-De5a4gF07Uqzvg55xj5uVYXSKJLNhH.jpg" alt="" loading="lazy">STAR REALTORS LTD</div>
+          <p class="footer-copy">Property management and two-bedroom homes at D42 Riverside Court, Obama Estate, Nairobi.</p>
+        </div>
+        <div>
+          <h2>Contact</h2>
+          <ul class="footer-list">
+            <li><i class="fa-solid fa-location-dot" aria-hidden="true"></i>P.O. Box 7010-00200, Nairobi</li>
+            <li><i class="fa-solid fa-phone" aria-hidden="true"></i><a href="tel:0741562122">0741 562 122</a></li>
+            <li><i class="fa-solid fa-phone" aria-hidden="true"></i><a href="tel:0719270827">0719 270 827</a></li>
+            <li><i class="fa-regular fa-envelope" aria-hidden="true"></i><a href="mailto:info@starrealtors.co.ke">info@starrealtors.co.ke</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2>Get in touch</h2>
+          <ul class="footer-list">
+            <li><i class="fa-brands fa-whatsapp" aria-hidden="true"></i><a href="https://wa.me/254741562122?text=Hello%2C%20I%27m%20interested%20in%20a%20two-bedroom%20home%20at%20D42%20Riverside%20Court." target="_blank" rel="noopener noreferrer">Ask about availability</a></li>
+            <li><i class="fa-solid fa-images" aria-hidden="true"></i><a href="#gallery">View property photos</a></li>
+            <li><i class="fa-solid fa-user-tie" aria-hidden="true"></i><a href="#founder">About the founder</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="copyright">&copy; 2026 <strong>STAR REALTORS LTD</strong>. All rights reserved.</div>
+    </div>
+  </footer>
+
+  <dialog class="photo-dialog" id="photo-dialog" aria-label="Property photo viewer">
+    <div class="dialog-top"><p class="dialog-caption" id="dialog-caption"></p><button class="dialog-close" type="button" aria-label="Close photo viewer"><i class="fa-solid fa-xmark" aria-hidden="true"></i></button></div>
+    <img class="dialog-image" id="dialog-image" src="" alt="">
+  </dialog>
+  <script>
+    const photoDialog = document.querySelector('#photo-dialog');
+    const dialogImage = document.querySelector('#dialog-image');
+    const dialogCaption = document.querySelector('#dialog-caption');
+
+    document.querySelectorAll('.photo-card').forEach((photo) => {
+      photo.addEventListener('click', () => {
+        dialogImage.src = photo.dataset.full;
+        dialogImage.alt = photo.querySelector('img').alt;
+        dialogCaption.textContent = photo.dataset.caption;
+        photoDialog.showModal();
+      });
+    });
+
+    photoDialog.querySelector('.dialog-close').addEventListener('click', () => photoDialog.close());
+    photoDialog.addEventListener('click', (event) => {
+      if (event.target === photoDialog) photoDialog.close();
+    });
+  </script>
+</body>
+</html>
