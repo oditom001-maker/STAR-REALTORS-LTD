@@ -1,46 +1,11 @@
-1. Logo Redesign Concept (For your Graphic Designer)
-
-To "reduce the logo website light" (make it more professional and less harsh), here is what you should tell your designer:
-
-· Design: Keep the star and the house concept, but make it a clean, modern vector graphic instead of a distressed stamp.
-· Colors: Use a solid, deep Navy Blue and a rich Gold. Avoid bright, glaring white backgrounds (use a transparent background or a subtle off-white).
-· Text Update:
-  · Top Arch: STAR REALTORS
-  · Bottom Arch: PROPERTY MANAGERS
-  · Center or just below the logo: Founder: Hon. Steven Owino Omondi
-
----
-
-2. Website / Flyer Copy
-
-[About the Founder]
-Meet the Founder: Hon. Steven Owino Omondi
-An ordained pastor and a visionary leader, Hon. Steven Owino Omondi believes that "The future is now." Under his leadership, Star Realtors currently manages both government and non-government properties with the highest level of professionalism. His mission is to bring integrity, innovation, and dedicated service to the real estate sector.
-
-[Welcome & Value Proposition]
-Partner With Us
-Star Realtors welcomes you to partner with us. We are here to make your apartment profitable while being of great help to our business partners and our esteemed customers. We are dedicated to securing your investments and providing seamless property management.
-
-Contact us today for partnerships and property management:
-📞 0741562122
-
----
-
-3. Edited Testimonials
-
-What Our Tenants Are Saying
-
-"The new management has brought a level of change that no other management thought of implementing during their time in office. The building is fully renovated, there have been no rent increases, and we no longer experience water shortages."
-— James, Tenant at D42 Riverside Court
-
-"We love the fact that the new management is here to listen to our complaints fully and find solutions for us. Security has never been a worry under Star Realtors' new management."
-— Susan, Tenant
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>STAR REALTORS LTD · Premium Nairobi Living</title>
+    <meta name="description" content="Star Realtors Ltd provides trusted property management and residential letting in Nairobi, Kenya. Partner with us to protect your investment and support your tenants.">
+    <meta name="theme-color" content="#0A2342">
+    <title>STAR REALTORS LTD · Property Management in Nairobi</title>
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -52,11 +17,12 @@ What Our Tenants Are Saying
         :root {
             --navy: #0A2342; /* Brand Navy */
             --gold: #C99B3B; /* Brand Gold */
+            --gold-ink: #785719;
             --gold-light: #F4E8D1;
-            --bg-light: #F8F9FA;
+            --bg-light: #F5F3EE;
             --text-dark: #2C3E50;
             --text-muted: #6B7A8B;
-            --white: #FFFFFF;
+            --white: #FCFBF8;
         }
 
         * {
@@ -123,47 +89,44 @@ What Our Tenants Are Saying
             display: flex;
             align-items: center;
             gap: 1rem;
+            color: inherit;
+            text-decoration: none;
         }
 
-        /* Custom Logo Recreation based on image */
         .logo-mark {
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            border: 2px dashed var(--navy);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            position: relative;
-            background: white;
+            width: 76px;
+            height: 76px;
+            flex: 0 0 auto;
         }
 
-        .logo-mark::before {
-            content: '★';
-            position: absolute;
-            top: 5px;
-            font-size: 24px;
-            color: var(--gold);
-            text-shadow: 0 0 2px rgba(0,0,0,0.2);
+        .logo-ring {
+            fill: var(--white);
+            stroke: var(--navy);
+            stroke-width: 1.5;
+        }
+
+        .logo-arc {
+            fill: none;
+        }
+
+        .logo-arc-text {
+            fill: var(--navy);
+            font-family: 'Montserrat', sans-serif;
+            font-size: 5.6px;
+            font-weight: 800;
+            letter-spacing: 0.55px;
+        }
+
+        .logo-star {
+            fill: var(--gold);
         }
 
         .logo-house {
-            position: absolute;
-            bottom: 8px;
-            width: 20px;
-            height: 15px;
-            background-color: var(--navy);
-            clip-path: polygon(50% 0%, 100% 40%, 100% 100%, 0 100%, 0 40%);
+            fill: var(--navy);
         }
-        
-        .logo-house::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 5px;
-            width: 10px;
-            height: 8px;
-            background-color: var(--gold);
+
+        .logo-door {
+            fill: var(--gold-light);
         }
 
         .brand-text {
@@ -180,11 +143,66 @@ What Our Tenants Are Saying
         }
 
         .brand-text .subtitle {
+            color: var(--navy);
             font-size: 0.65rem;
-            color: var(--gold);
             font-weight: 700;
             letter-spacing: 2px;
             text-transform: uppercase;
+        }
+
+        .brand-founder {
+            color: var(--text-muted);
+            font-size: 0.72rem;
+            font-weight: 600;
+            letter-spacing: 0.1px;
+            margin-top: 0.25rem;
+        }
+
+        .footer-brand {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            color: var(--white);
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+
+        .footer-brand .logo-mark {
+            width: 56px;
+            height: 56px;
+        }
+
+        .footer-brand .logo-ring {
+            fill: transparent;
+            stroke: var(--white);
+        }
+
+        .footer-brand .logo-house {
+            fill: var(--white);
+        }
+
+        .footer-brand .logo-door {
+            fill: var(--navy);
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1.35rem;
+        }
+
+        .nav-links a {
+            color: var(--text-dark);
+            font-size: 0.9rem;
+            font-weight: 700;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .nav-links a:hover,
+        .nav-links a:focus-visible {
+            color: var(--gold-ink);
         }
 
         .nav-contact {
@@ -491,6 +509,216 @@ What Our Tenants Are Saying
             font-weight: 600;
         }
 
+        /* ===== FOUNDER, PARTNERSHIP & TESTIMONIALS ===== */
+        .about-section,
+        .partnership-section,
+        .testimonials-section {
+            padding: 5.5rem 0;
+        }
+
+        .about-section {
+            background: var(--bg-light);
+        }
+
+        .founder-layout {
+            display: grid;
+            grid-template-columns: minmax(0, 1.1fr) minmax(280px, 0.9fr);
+            align-items: center;
+            gap: 4rem;
+        }
+
+        .section-eyebrow {
+            color: var(--gold-ink);
+            font-size: 0.78rem;
+            font-weight: 800;
+            letter-spacing: 1.8px;
+            text-transform: uppercase;
+            margin-bottom: 0.8rem;
+        }
+
+        .about-copy h2,
+        .partnership-heading h2,
+        .testimonials-section h2 {
+            color: var(--navy);
+            font-size: clamp(2rem, 4vw, 2.8rem);
+            font-weight: 800;
+            line-height: 1.15;
+            margin-bottom: 1rem;
+        }
+
+        .about-copy h3 {
+            color: var(--navy);
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+        }
+
+        .about-copy > p:not(.section-eyebrow),
+        .partnership-heading > p:not(.section-eyebrow) {
+            color: var(--text-muted);
+            font-size: 1.05rem;
+            line-height: 1.85;
+            max-width: 680px;
+        }
+
+        .about-copy .btn {
+            margin-top: 1.6rem;
+        }
+
+        .founder-note {
+            position: relative;
+            padding: 3rem;
+            border-radius: 14px;
+            background: var(--navy);
+            color: var(--white);
+            box-shadow: 0 20px 45px rgba(10, 35, 66, 0.15);
+        }
+
+        .founder-note::before {
+            content: '';
+            position: absolute;
+            inset: 12px;
+            border: 1px solid rgba(201, 155, 59, 0.48);
+            border-radius: 9px;
+            pointer-events: none;
+        }
+
+        .founder-note-label {
+            color: #e3bc68;
+            display: block;
+            font-size: 0.75rem;
+            font-weight: 800;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+        }
+
+        .founder-note blockquote {
+            color: var(--white);
+            font-family: 'Montserrat', sans-serif;
+            font-size: clamp(1.8rem, 4vw, 2.5rem);
+            font-weight: 700;
+            line-height: 1.25;
+            margin: 1.3rem 0;
+        }
+
+        .founder-note p {
+            color: #d1d9e2;
+            font-size: 0.9rem;
+        }
+
+        .partnership-section {
+            background: var(--white);
+        }
+
+        .partnership-heading {
+            max-width: 760px;
+            margin: 0 auto 2.5rem;
+            text-align: center;
+        }
+
+        .partnership-heading > p:not(.section-eyebrow) {
+            margin: 0 auto;
+        }
+
+        .service-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 1.2rem;
+        }
+
+        .service-card {
+            padding: 1.8rem;
+            border: 1px solid #e8e4dc;
+            border-radius: 10px;
+            background: var(--bg-light);
+        }
+
+        .service-card span {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 42px;
+            height: 42px;
+            border-radius: 50%;
+            background: var(--gold-light);
+            color: var(--navy);
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.8rem;
+            font-weight: 800;
+        }
+
+        .service-card h3 {
+            color: var(--navy);
+            font-size: 1.05rem;
+            margin: 1rem 0 0.5rem;
+        }
+
+        .service-card p {
+            color: var(--text-muted);
+            font-size: 0.92rem;
+            line-height: 1.7;
+        }
+
+        .partnership-cta {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1.5rem;
+            margin-top: 2rem;
+            padding: 1.5rem 1.8rem;
+            border-radius: 10px;
+            background: var(--navy);
+            color: var(--white);
+        }
+
+        .partnership-cta p {
+            font-weight: 700;
+        }
+
+        .testimonials-section {
+            background: var(--bg-light);
+        }
+
+        .testimonials-section .section-header {
+            margin-bottom: 2.5rem;
+        }
+
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 1.5rem;
+        }
+
+        .testimonial-card {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            gap: 1.5rem;
+            padding: 2rem;
+            border: 1px solid #e8e4dc;
+            border-radius: 12px;
+            background: var(--white);
+            box-shadow: 0 12px 28px rgba(10, 35, 66, 0.05);
+        }
+
+        .testimonial-card blockquote {
+            color: var(--text-dark);
+            font-size: 1rem;
+            line-height: 1.85;
+        }
+
+        .testimonial-card figcaption {
+            color: var(--navy);
+            font-weight: 800;
+        }
+
+        .testimonial-card figcaption span {
+            color: var(--text-muted);
+            display: block;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-top: 0.25rem;
+        }
+
         /* ===== FOOTER ===== */
         .footer {
             background: var(--navy);
@@ -556,14 +784,35 @@ What Our Tenants Are Saying
             .listing-details { padding: 2rem; }
         }
 
+        @media (max-width: 992px) {
+            .nav-links { gap: 0.8rem; }
+            .nav-contact { gap: 0.8rem; }
+            .founder-layout { gap: 2rem; }
+        }
+
         @media (max-width: 768px) {
+            .container { padding: 0 1.25rem; }
             .navbar { flex-direction: column; text-align: center; }
+            .logo-container { justify-content: center; gap: 0.75rem; }
+            .logo-mark { width: 68px; height: 68px; }
+            .brand-text .title { font-size: 1.25rem; }
+            .brand-founder { font-size: 0.65rem; }
+            .nav-links { flex-wrap: wrap; gap: 0.8rem 1.2rem; }
             .nav-contact { flex-direction: column; gap: 0.8rem; width: 100%; }
             .nav-contact .phone-link { justify-content: center; }
+            .hero { padding: 4rem 0; }
             .hero h1 { font-size: 2.2rem; }
             .hero-actions { flex-direction: column; }
             .features-list { grid-template-columns: 1fr; }
             .top-bar span { display: block; margin: 0.2rem 0; }
+            .about-section,
+            .partnership-section,
+            .testimonials-section { padding: 4rem 0; }
+            .founder-layout,
+            .service-grid,
+            .testimonial-grid { grid-template-columns: 1fr; }
+            .founder-note { padding: 2.5rem; }
+            .partnership-cta { flex-direction: column; align-items: flex-start; }
         }
     </style>
 </head>
@@ -578,18 +827,35 @@ What Our Tenants Are Saying
 
     <!-- Navigation -->
     <div class="container">
-        <nav class="navbar">
-            <div class="logo-container">
-                <!-- Custom SVG/CSS Logo to match the uploaded seal -->
-                <div class="logo-mark">
-                    <div class="logo-house"></div>
-                </div>
-                <div class="brand-text">
-                    <div class="title">STAR REALTORS LTD</div>
-                    <div class="subtitle">Property Managers</div>
-                </div>
+        <nav class="navbar" aria-label="Main navigation" id="top">
+            <a class="logo-container" href="#top" aria-label="Star Realtors Ltd home">
+                <svg class="logo-mark" viewBox="0 0 88 88" role="img" aria-labelledby="logo-title">
+                    <title id="logo-title">Star Realtors Property Managers logo</title>
+                    <defs>
+                        <path id="logo-top-arc" d="M 13 43 A 31 31 0 0 1 75 43" />
+                        <path id="logo-bottom-arc" d="M 75 48 A 31 31 0 0 1 13 48" />
+                    </defs>
+                    <circle class="logo-ring" cx="44" cy="44" r="41" />
+                    <text class="logo-arc-text"><textPath href="#logo-top-arc" startOffset="50%" text-anchor="middle">STAR REALTORS</textPath></text>
+                    <text class="logo-arc-text"><textPath href="#logo-bottom-arc" startOffset="50%" text-anchor="middle">PROPERTY MANAGERS</textPath></text>
+                    <path class="logo-star" d="M44 25l2.8 5.7 6.3.9-4.6 4.4 1.1 6.2-5.6-3-5.6 3 1.1-6.2-4.6-4.4 6.3-.9z" />
+                    <path class="logo-house" d="M29 47.5 44 36l15 11.5v15H29z" />
+                    <path class="logo-door" d="M40.5 53h7v9.5h-7z" />
+                </svg>
+                <span class="brand-text">
+                    <span class="title">STAR REALTORS LTD</span>
+                    <span class="subtitle">Property Managers</span>
+                    <span class="brand-founder">Hon. Steven Owino Omondi, Founder</span>
+                </span>
+            </a>
+
+            <div class="nav-links">
+                <a href="#about">About</a>
+                <a href="#featured">Properties</a>
+                <a href="#testimonials">Testimonials</a>
+                <a href="#contact">Contact</a>
             </div>
-            
+
             <div class="nav-contact">
                 <a href="tel:0741562122" class="phone-link">
                     <i class="fas fa-phone-alt"></i> 0741 562 122
@@ -610,10 +876,27 @@ What Our Tenants Are Saying
             <p>Experience premium living with Star Realtors Ltd. We connect you to secure, spacious, and modern high-rise residentials in Nairobi's most serene neighborhoods.</p>
             <div class="hero-actions">
                 <a href="#featured" class="btn btn-gold">View Vacant Houses</a>
-                <a href="https://wa.me/254741562122" target="_blank" class="btn btn-navy" style="background: #25D366; color: white; border:none;"><i class="fab fa-whatsapp" style="margin-right: 8px; font-size: 1.2rem;"></i> WhatsApp Us</a>
+                <a href="https://wa.me/254741562122" target="_blank" rel="noopener noreferrer" class="btn btn-navy" style="background: #25D366; color: white; border:none;"><i class="fab fa-whatsapp" style="margin-right: 8px; font-size: 1.2rem;"></i> WhatsApp Us</a>
             </div>
         </div>
     </header>
+
+    <section class="about-section" id="about" aria-labelledby="founder-heading">
+        <div class="container founder-layout">
+            <div class="about-copy">
+                <p class="section-eyebrow">Leadership with purpose</p>
+                <h2 id="founder-heading">Meet the Founder</h2>
+                <h3>Hon. Steven Owino Omondi</h3>
+                <p>An ordained pastor and a visionary leader, Hon. Steven Owino Omondi believes that “The future is now.” Under his leadership, Star Realtors manages both government and non-government properties with the highest level of professionalism. His mission is to bring integrity, innovation, and dedicated service to the real estate sector.</p>
+                <a href="#partner" class="btn btn-gold">Partner with Star Realtors</a>
+            </div>
+            <aside class="founder-note" aria-label="The founder’s vision">
+                <span class="founder-note-label">A belief that guides us</span>
+                <blockquote>“The future is now.”</blockquote>
+                <p>Integrity, innovation, and dedicated service in every property we manage.</p>
+            </aside>
+        </div>
+    </section>
 
     <!-- Featured Listing (From Flyer) -->
     <section class="featured-section" id="featured">
@@ -645,6 +928,37 @@ What Our Tenants Are Saying
                         <h4>0741 562 122</h4>
                     </div>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="partnership-section" id="partner" aria-labelledby="partner-heading">
+        <div class="container">
+            <div class="partnership-heading">
+                <p class="section-eyebrow">Property management, built around people</p>
+                <h2 id="partner-heading">Partner With Us</h2>
+                <p>Star Realtors welcomes you to partner with us. We are here to make your apartment profitable while being of great help to our business partners and our esteemed customers. We are dedicated to securing your investments and providing seamless property management.</p>
+            </div>
+            <div class="service-grid">
+                <article class="service-card">
+                    <span>01</span>
+                    <h3>Property expertise</h3>
+                    <p>We manage both government and non-government properties with professionalism and care.</p>
+                </article>
+                <article class="service-card">
+                    <span>02</span>
+                    <h3>Investment care</h3>
+                    <p>Our team is dedicated to securing your investment and helping your apartment perform.</p>
+                </article>
+                <article class="service-card">
+                    <span>03</span>
+                    <h3>People-first service</h3>
+                    <p>We listen to partners and residents, providing dedicated support throughout the tenancy.</p>
+                </article>
+            </div>
+            <div class="partnership-cta">
+                <p>Contact us today for partnerships and property management.</p>
+                <a class="btn btn-gold" href="tel:0741562122">Call 0741 562 122</a>
             </div>
         </div>
     </section>
@@ -686,6 +1000,25 @@ What Our Tenants Are Saying
         </div>
     </section>
 
+    <section class="testimonials-section" id="testimonials" aria-labelledby="testimonials-heading">
+        <div class="container">
+            <div class="section-header">
+                <p class="section-eyebrow">The people who call our properties home</p>
+                <h2 id="testimonials-heading">What Our Tenants Are Saying</h2>
+            </div>
+            <div class="testimonial-grid">
+                <figure class="testimonial-card">
+                    <blockquote>“The new management has brought a level of change that no other management thought of implementing during their time in office. The building is fully renovated, there have been no rent increases, and we no longer experience water shortages.”</blockquote>
+                    <figcaption>James <span>Tenant at D42 Riverside Court</span></figcaption>
+                </figure>
+                <figure class="testimonial-card">
+                    <blockquote>“We love the fact that the new management is here to listen to our complaints fully and find solutions for us. Security has never been a worry under Star Realtors’ new management.”</blockquote>
+                    <figcaption>Susan <span>Tenant</span></figcaption>
+                </figure>
+            </div>
+        </div>
+    </section>
+
     <!-- Footer -->
     <footer class="footer" id="contact">
         <div class="container">
@@ -693,8 +1026,14 @@ What Our Tenants Are Saying
                 <div class="footer-col">
                     <h4>STAR REALTORS LTD</h4>
                     <p style="margin-bottom: 1.5rem; color: #d1d9e2;">Your trusted partner in finding premium, secure, and leafy residential spaces in Nairobi.</p>
-                    <div class="logo-mark" style="border-color: var(--white); background: transparent; transform: scale(0.8); margin-left: -10px;">
-                        <div class="logo-house" style="background-color: var(--white);"></div>
+                    <div class="footer-brand">
+                        <svg class="logo-mark" viewBox="0 0 88 88" aria-hidden="true">
+                            <circle class="logo-ring" cx="44" cy="44" r="41" />
+                            <path class="logo-star" d="M44 25l2.8 5.7 6.3.9-4.6 4.4 1.1 6.2-5.6-3-5.6 3 1.1-6.2-4.6-4.4 6.3-.9z" />
+                            <path class="logo-house" d="M29 47.5 44 36l15 11.5v15H29z" />
+                            <path class="logo-door" d="M40.5 53h7v9.5h-7z" />
+                        </svg>
+                        <span>Hon. Steven Owino Omondi, Founder</span>
                     </div>
                 </div>
                 
@@ -708,14 +1047,15 @@ What Our Tenants Are Saying
 
                 <div class="footer-col">
                     <h4>Quick Links</h4>
+                    <p><a href="#about"><i class="fas fa-chevron-right" style="font-size: 0.8rem;"></i> About the Founder</a></p>
                     <p><a href="#featured"><i class="fas fa-chevron-right" style="font-size: 0.8rem;"></i> Vacant Houses</a></p>
-                    <p><a href="#featured"><i class="fas fa-chevron-right" style="font-size: 0.8rem;"></i> Property Management</a></p>
-                    <p><a href="#contact"><i class="fas fa-chevron-right" style="font-size: 0.8rem;"></i> Book a Viewing</a></p>
+                    <p><a href="#partner"><i class="fas fa-chevron-right" style="font-size: 0.8rem;"></i> Property Management</a></p>
+                    <p><a href="#testimonials"><i class="fas fa-chevron-right" style="font-size: 0.8rem;"></i> Tenant Testimonials</a></p>
                 </div>
             </div>
             
             <div class="footer-bottom">
-                &copy; 2024 <span>STAR REALTORS LTD</span>. All Rights Reserved. | Registered to Stephen Omondi Owino
+                &copy; 2026 <span>STAR REALTORS LTD</span>. All Rights Reserved. | Founded by Hon. Steven Owino Omondi
             </div>
         </div>
     </footer>
